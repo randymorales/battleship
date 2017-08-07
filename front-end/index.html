@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Battleship</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/site.css">
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row vertical-center-row">
+        <div class="col-md-12">
+
+            <!-- Pantalla de no conectado al servidor -->
+            <div id="disconnected">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4 text-center">
+                        <div class="alert alert-danger">
+                            <p>No está conectado al servidor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pantalla de espera -->
+            <div id="waiting-room" style="display:none;">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4 text-center">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">Esperando.....</div>
+                            <div class="panel-body">
+                                <p>Conexión establecida con el servidor</p>
+                                <p>Esperando conexión del otro jugador</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pantalla de juego -->
+            <div id="game" style="display:none;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">MULTIBATTLESHIP</div>
+                            <div class="panel-body">
+
+                                <!-- Tableros de los jugadores -->
+                                <div class="row">
+                                    <div class="col-md-6 player-grid text-center">
+                                        <h3>Sus barcos</h3>
+                                        <canvas id="myGrid" width="450" height="450">El navegador no soporta canvas</canvas>
+                                    </div>
+                                    <div class="col-md-6 player-grid text-center">
+                                        <h3>Oponente</h3>
+                                        <canvas id="opponentsGrid" width="450" height="450">El navegador no soporta canvas</canvas>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <ul class="list-group">
+                                <!-- Indica de quien es el turno, o si ya terminó la partida -->
+                                <li class="list-group-item text-center" id="turn-status"></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<script type="text/javascript" src="/js/game.js"></script>
+<script type="text/javascript" src="/js/client.js"></script>
+</body>
+</html>
