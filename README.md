@@ -1,21 +1,22 @@
 # MultiBattleship
 
-Este es un battleship multijugador creado con Node.js y socket.io.
-Al comienzo del juego, cinco barcos de diferentes tamaños se colocan al azar en un tablero de 10 x 10.
-Los jugadores toman turnos disparando en el tablero del oponente hasta que un jugador haya hundido todos los barcos del oponente.
+Battleship multijugador creado con Node.js y socket.io.
+Para jugar, se deben abrir 2 pestañas de navegador.
+Al comienzo del juego, cinco barcos de diferentes tamaños (1 de 5 casillas, 1 de 4, 2 de 3, 1 de 2) se colocan aleatoriamente en un tablero de 10 x 10.
+Gana el jugador que hunda primero todos los barcos del oponente.
 
-## Instalar
+## Pasos para ejecutar el juego
 
 Paso 1: Descargar/Clonar.
 ```
-git clone https://github.com/randroxcr/Battleship
+git clone https://github.com/randroxcr/battleship
 ```
-Step 2: Dentro de la carpeta, y por la consola.
+Paso 2: Dentro de la carpeta, y por la consola.
 ```
 npm install
 ```
-Step 3:
+Paso3 3:
 ```
 node server.js
 ```
-Step 4: Abrir http://localhost:9999/
+Paso 4: Abrir http://localhost:9999/
