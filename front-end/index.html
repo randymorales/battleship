@@ -4,17 +4,24 @@
     <title>Battleship</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    
     <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/bootstrap-reboot.css">
+    
+
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <div class="container">
     <div class="row vertical-center-row">
         <div class="col-md-12">
 
-            <!-- Pantalla de no conectado al servidor -->
+            <!-- Pantalla de no conectado al servidor-->
             <div id="disconnected">
                 <div class="row">
                     <div class="col-sm-4 col-sm-offset-4 text-center">
@@ -55,17 +62,17 @@
                                 <div class="row">
                                     <div class="col-md-6 player-grid text-center">
                                         <h3>Sus barcos</h3>
-                                        <canvas id="myGrid" width="450" height="450">El navegador no soporta canvas</canvas>
+                                        <canvas id="myGrid" width="520" height="520">El navegador no soporta canvas</canvas>
                                     </div>
                                     <div class="col-md-6 player-grid text-center">
                                         <h3>Oponente</h3>
-                                        <canvas id="opponentsGrid" width="450" height="450">El navegador no soporta canvas</canvas>
+                                        <canvas id="opponentsGrid" width="520" height="520">El navegador no soporta canvas</canvas>
                                     </div>
                                 </div>
                                 
                             </div>
 
-                            <ul class="list-group">
+                            <ul class="panel-bottom">
                                 <!-- Indica de quien es el turno, o si ya terminó la partida -->
                                 <li class="list-group-item text-center" id="turn-status"></li>
                             </ul>
@@ -74,6 +81,7 @@
                     </div>
                 </div>
             </div>
+
 
         </div>
     </div>

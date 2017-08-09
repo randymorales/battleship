@@ -5,7 +5,7 @@ var GameStatus = {
 
 var Game = (function() {
   var canvas = [], context = [], grid = [],
-      gridHeight = 450, gridWidth = 450, gridBorder = 1,
+      gridHeight = 520, gridWidth = 520, gridBorder = 1,
       gridRows = 10, gridCols = 10, markPadding = 10, shipPadding = 3,
       squareHeight = (gridHeight - gridBorder * gridRows - gridBorder) / gridRows,
       squareWidth = (gridWidth - gridBorder * gridCols - gridBorder) / gridCols,
@@ -147,7 +147,7 @@ var Game = (function() {
         }
 
         context[gridIndex].fillRect(squareX, squareY, squareWidth, squareHeight);
-        context[gridIndex].drawImage(water, squareX, squareY,40,40);
+        context[gridIndex].drawImage(water, squareX, squareY,squareWidth,squareHeight);
       }
     }
   };
@@ -185,11 +185,11 @@ var Game = (function() {
         squareY = i * (squareHeight + gridBorder) + gridBorder;
 
         if(grid[gridIndex].shots[i * gridCols + j] === 1) {   //Dibuja el fallo
-          context[gridIndex].drawImage(miss, squareX, squareY,40,40);
+          context[gridIndex].drawImage(miss, squareX, squareY,squareWidth,squareHeight);
         }
         
         else if(grid[gridIndex].shots[i * gridCols + j] === 2) {   //Dibuja el acierto       
-          context[gridIndex].drawImage(check, squareX, squareY,40,40);
+          context[gridIndex].drawImage(check, squareX, squareY,squareWidth,squareHeight);
         }
       }
     }

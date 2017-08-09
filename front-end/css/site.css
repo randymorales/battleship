@@ -20,6 +20,7 @@ html, body, .container {
 .container {
     display: table;
     vertical-align: middle;
+    align-items: center;
 }
 .vertical-center-row {
     display: table-cell;
@@ -32,23 +33,24 @@ h3 {
 
 .panel, .panel-heading {
     border-radius: 0px;
-    margin: auto;
-    width: 50%;
-    height: 50%;
-    padding: 10px;
+    border-color: #FFF;
 }
 
 .panel, .panel-body {
-    padding-bottom: 0px;
     margin-bottom: 0px;
+    text-align: center;
 }
 
-.panel-primary > .panel-heading, .btn-primary{
+.panel-primary > .panel-heading, .btn-primary, .btn-primary:active, .btn-primary:focus {
     border-radius: 0px;
-    margin: auto;
-    width: 50%;
-    height: 50%;
-    padding: 10px;
+    background-color: #FFF;
+    text-align: center;
+}
+
+.panel-bottom{
+    border-radius: 0px;
+    background-color: #FFF;
+    text-align: center;
 }
 
 .btn-primary:hover {
@@ -58,6 +60,8 @@ h3 {
 
 .list-group-item {
     border-color: #ccc;
+    margin-top: -65px;
+    text-align: center
 }
 
 .form-control:focus {
